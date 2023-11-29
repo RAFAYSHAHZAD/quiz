@@ -59,6 +59,7 @@
             margin-left: -120px;
                     }
     }
+
     #options-container{
        display: flex;
        flex-direction: column;
@@ -99,6 +100,7 @@
                 correctAnswer:2,
                 marks:10
             },
+            
 {
     question:"بیع صرف ایجاب سے منعقد ہوگی؟",
                 options: ["جی ہاں",
@@ -130,13 +132,47 @@ options: ["بیع فاسد",
                 marks:10
 
 },
-{
+
+{ question:" کسی نے اگر بیع کی ہر قفیز کے بدلے ایک درھم کی  تو صرف ایک ہے قفیز میں بیع جائز ہوگی یہ کس کا موقف ہے ؟",
+options: ["امام ابو یوسف",
+
+                  "امام اعظم رحمتہ اللہ  "  
+                  ],
+                correctAnswer:0,
+                marks:10
 
 },
+ {question:"اگر کسی نے بکری کے بیع اسطرح کی کے ہر بکری کے بدلے ایک  درھم تو اب کیا حکم ہوگا؟ ",
+ options:[
+ "بیع جائز ", " بیع فاسد " , "بیع مکروہ",
+ ],
+ correctAnswer:2,
+ marks:10
+ },
+{question:"ثمن کیا ہوتا ہے؟",
+options:[
+    "بازار کی قیمت"," مشاورت سے جو تہ ہو ",
+],
+correctAnswer:0,
+marks:10
+},
+{question:"قیمت کیا ہوتی ہے؟",
+options:[
+    "بازار میں رائج"," مشاورت سے جو تہ ہو ",
+],
+correctAnswer:1,
+marks:10
+},
 
+{question:"بیع کو پورا کرناکب لازم ہے؟",
+ options:[
+  "قبول کے بعد " , "ایجاب کے بعد",
+ ],
+ correctAnswer:1,
+ marks:10
+ },
 
-
-        ];
+];
 
         var currentQuestionIndex = 0;
         var totalMarks = 0;
@@ -191,6 +227,10 @@ options: ["بیع فاسد",
 
         // Load the first question on page load
         window.onload = loadQuestion;
-    </script>
+// console.log(questions)
+ console.log(selectedOption)
+ console.log(checkAnswer)
+ console.log(showResult)
+</script>
 </body>
 </html>
