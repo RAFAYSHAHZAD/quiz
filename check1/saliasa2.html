@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Quiz</title>
+    <style>   body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: aliceblue;
+    }
+
+    #quiz-container {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .question {
+        margin-bottom: 15px;
+    }
+
+    .options {
+        margin-top: 10px;
+    }
+
+    .option {
+        margin-bottom: 5px;
+    }
+
+    #result {
+        margin-top: 20px;
+        font-weight: bold;
+    }
+
+    #next-btn {
+        padding: 10px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    /* Responsive Styles */
+    @media only screen and (max-width: 600px) {
+        #quiz-container {
+            max-width: 100%;
+        }
+    }
+    
+    @media only screen and (max-width: 600px) {
+        #options-container {
+            max-width: 100%;
+            margin-left: -120px;
+                    }
+    }
+
+    #options-container{
+       display: flex;
+       flex-direction: column;
+    }
+</style>
+    </style>
+</head>
+<body>
+    <div id="quiz-container" style="width:fit-content ;margin-top: 200px; ">
+        <div id="question-container" class="question" style="margin-top: 100px; width: 40%;  margin-left: 80px;margin-top: 20px; font-size: 25px; width: 70%; height: 40%;"></div>
+ 
+        <div class="options" id="options-container" style="display: block; height:50px;margin-top: 70px;font-size: 20px;justify-content: center;align-items:center ; width: 100%; padding-left: 140px;" center="center"></div>
+ 
+        <button onclick="checkAnswer()" style="width: 100%; height: 40px;margin-bottom: 20px; margin-top: 10px;">Next</button>
+        <div id="result-container" style="background-color: aliceblue; margin-bottom: -20px;"></div>
+    </div>
+
+    <script>
+        var questions = [
+            
+
+
+            {
+                question: "بیوع کیا ہے؟",
+                options: ["جمع", "تثنیہ", "واحد"],
+                correctAnswer:1, // Insaan
+                marks: 10
+            }
+            
+            // Add more questions as needed
+];
+
+        var currentQuestionIndex = 0;
+        var totalMarks = 0;
+
+        function loadQuestion() {
+            var questionContainer = document.getElementById('question-container');
+            var optionsContainer = document.getElementById('options-container');
+
+            questionContainer.textContent = questions[currentQuestionIndex].question;
+            optionsContainer.innerHTML = "";
+
+            for (var i = 0; i < questions[currentQuestionIndex].options.length; i++) {
+                var option = document.createElement('input');
+                option.type = 'radio';
+                option.name = 'option';
+                option.value = i;
+                option.classList.add('option');
+                optionsContainer.appendChild(option);
+
+                var label = document.createElement('label');
+                label.textContent = questions[currentQuestionIndex].options[i];
+                optionsContainer.appendChild(label);
+            }
+        }
+
+        function checkAnswer() {
+            var selectedOption = document.querySelector('input[name="option"]:checked');
+
+            if (selectedOption !== null) {
+                var selectedAnswer = parseInt(selectedOption.value);
+
+                if (selectedAnswer === questions[currentQuestionIndex].correctAnswer) {
+                    totalMarks += questions[currentQuestionIndex].marks;
+                }
+
+                currentQuestionIndex++;
+
+                if (currentQuestionIndex < questions.length) {
+                    loadQuestion();
+                } else {
+                    showResult();
+                }
+            } else {
+                alert('Please select an option.');
+            }
+        }
+
+        function showResult() {
+            var resultContainer = document.getElementById('result-container');
+            resultContainer.textContent = 'Total Marks: ' + totalMarks;
+        }
+
+        // Load the first question on page load
+        window.onload = loadQuestion;
+// console.log(questions)
+ console.log(selectedOption)
+ console.log(checkAnswer)
+ console.log(showResult)
+</script>
+</body>
+</html>
