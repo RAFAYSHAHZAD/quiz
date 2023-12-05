@@ -1,522 +1,595 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Nastaliq+Urdu:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="D:\check\check1\Aslam Aslam.ttf">
-<link rel="stylesheet" href="D:\check\check1\Jameel Noori Nastaleeq Regular.ttf">
-<link rel="stylesheet" href="D:\check\check1\AlQalam Taj Nastaleeq Regular.ttf">
-<link rel="stylesheet" href="st">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Nastaliq+Urdu:wght@600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="D:\check\check1\Aslam Aslam.ttf">
+  <link rel="stylesheet" href="D:\check\check1\Jameel Noori Nastaleeq Regular.ttf">
+  <link rel="stylesheet" href="D:\check\check1\AlQalam Taj Nastaleeq Regular.ttf">
 </head>
 
-             <style>
-        body {
-            font-family: 'Dancing Script', ;
-            background-color: rgb(255, 255, 255);
-            margin: 0;
-            padding: 0;
-        }
-    
-        .navbar {
-            height: 90px;
-           background-color:rgb(255, 255, 255) ;
-            border-radius: 10px;
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            margin-top: -100PX;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-    
-        .navbar-brand img {
-            height: 70px;
-            width: 90px;
-        }
-        @media only screen and (max-width:800px){li{border-bottom: 2px solid rgb(245, 245, 245); width: 100%; padding-left: 200px;}}
-        @media only screen and (max-width:800px){ul { background-color: white;}}
-   
-        .navbar-toggler {
-            background-color:rgb(255, 255, 255); /* Adjust the color as needed */
-            border: 3px solid;
-            border-color:black;
-        }
-    
-        .navbar-nav {
-            margin-left: auto;
-            display: flex;
-            align-items: center;
-        }
-    
-        .navbar-nav a {
-            margin: 0 20px;
-            color: rgb(0, 0, 0);
-            text-decoration: none;
-            font-size: 18px;
-        }
-        b:hover{
-          color: goldenrod;
-        }
-    @media only screen and (max-width:600px) {b:hover{
+<style>
+  body {
+    font-family: 'Dancing Script', ;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar {
+    height: 90px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    margin-top: -100PX;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .navbar-brand img {
+    height: 70px;
+    width: 90px;
+  }
+
+  .navbar-toggler {
+    background-color: rgb(255, 255, 255);
+    /* Adjust the color as needed */
+    border: 3px solid;
+    border-color: black;
+  }
+
+  .navbar-nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-nav a {
+    margin: 0 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  b:hover {
+    color: goldenrod;
+  }
+
+  @media only screen and (max-width:600px) {
+    b:hover {
       border-bottom: 2px solid black;
     }
-      
+
+  }
+
+  .btn {
+    margin-left: 20px;
+    margin-top: -10px;
+  }
+
+  .btn24 {
+    margin-left: -50px;
+  }
+
+  #carouselExampleIndicators {
+    margin-top: 100px;
+    /* Adjust as needed */
+  }
+
+  .nav-item {
+    margin: 20px;
+  }
+
+  .card58 {
+    margin-left: 70px;
+    border: 1px solid rgb(25, 25, 53);
+    border-radius: 10px;
+  }
+
+  .btn :hover {
+    color: blue;
+    background-color: white;
+    border: 1px solid blue;
+  }
+
+  .card59 {
+    border: 1px solid blue;
+    border-radius: 10px;
+    margin-left: 70px;
+    margin-top: 80px;
+    font-family: 'Aslam', sans-serif;
+
+
+
+  }
+
+  @font-face {
+    font-family: 'AlQalam Taj Nastaleeq Regular.ttf';
+    src: url('fonts/AlQalam TajNastaleeq Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  body {
+
+    font-family: 'Noto Nastaliq Urdu', serif;
+  }
+
+  .t60 {
+    display: inline-flex;
+    padding-right: 50px;
+  }
+
+  @media only screen and (max-width:600px) {
+    .t60 {
+      display: block;
     }
-        .btn {
-            margin-left: 20px;
-            margin-top: -10px;
-        }
-    
-        .btn24 {
-            margin-left: -50px;
-        }
-    
-        #carouselExampleIndicators {
-            margin-top: 100px; /* Adjust as needed */
-        }
-        .nav-item {
-           margin: 20px;
-        }
-        
-        .card58 {
-        margin-left: 70px;
-        border: 1px solid rgb(25, 25, 53);
-        border-radius: 10px;
-     }
-     .btn :hover {
-        color: blue;
-        background-color: white;
-        border: 1px solid blue ;
-     }
-     .card59 {
-      border: 1px solid blue;
-      border-radius: 10px;
-      margin-left: 70px;
-      margin-top: 80px;
-       font-family: 'Aslam', sans-serif;
-     
-      
-    
-     }
-    
-     @font-face {
-      font-family: 'AlQalam Taj Nastaleeq Regular.ttf';
-      src: url('fonts/AlQalam TajNastaleeq Regular.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
+
+    ul {
+      background-color: white;
+
+
     }
-    
-    body {
-     
-font-family: 'Noto Nastaliq Urdu', serif;
+
+    li {
+      border-bottom: 2px solid rgb(233, 230, 230);
+
     }
-    .t60{
-      display:inline-flex;
-      padding-right: 50px;
-    }
-    
-    @media only screen and (max-width:600px){
-      .t60{
-        display: block;
-      }
-    }
-    /* Additional styling for your HTML elements */
-    
-   .card59 :hover {
+  }
+
+  /* Additional styling for your HTML elements */
+
+  .card59 :hover {
     background-color: aliceblue;
     color: rgb(0, 0, 0);
     border-style: none;
     text-decoration: none;
     color: rgb(21, 33, 44);
     display: block;
- 
- }
- .card-title {
+
+  }
+
+  .card-title {
     color: rgb(0, 0, 0);
- }
- 
- ul {
-        margin-left: 300px;
-        font-size: 12pt;
- }
- .imgsrc {
+  }
+
+  ul {
+    margin-left: 300px;
+    font-size: 12pt;
+  }
+
+  .imgsrc {
     height: 70px;
     width: 90px;
- }
- li {
+  }
+
+  li {
     margin: 20px;
 
- }
-ul :hover{
-    color: blue;font-size: 15pt;
+  }
 
- }
- .btn {
-    margin-left:  90px;
+  ul :hover {
+    color: blue;
+    font-size: 15pt;
+
+  }
+
+  .btn {
+    margin-left: 90px;
     margin-top: -10px;
 
- }
- .btn24 {
-   margin-left: -50px;
+  }
+
+  .btn24 {
+    margin-left: -50px;
 
 
- }
- .navbar {
+  }
+
+  .navbar {
     height: 100px;
- }
- .aik{
+  }
+
+  .aik {
     color: blue;
     font-family: "Dancing Script";
     font-weight: bold;
     margin-left: 50px;
-    
-    
-    
 
-    
-    
- }
- .aik:hover{
-    color:goldenrod;
+
+
+
+
+
+  }
+
+  .aik:hover {
+    color: red;
     font-family: 'Dancing Script'
-    ;
-    cursor: pointer;
- }
- u{
-    color: blue;
- }
- u:hover{
-    color:goldenrod;
- }
- .aik1{
-   height: 500px;
-   width: 550px;
-  margin-left: -30px;
-   margin-top: -30px;
-   border-radius: 20px;
-  
-  
- }
- .aik2{
- margin-left: 130px;
-  display: flex;
-  font-family: 'Dancing Script';
- }
- .aik4{
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  margin-left: -20px;
-  margin-top: 30px;
- }
- .footer {
-      background-color: #1B182B;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 20px;
-      bottom: 0;
-      width: 100%;
-      height: 550px; 
-      display: flex; 
-    }
-    
-    .aik5{
-      margin-top: 10px;
-    }
-   
-    .aik1{
-      height: auto;
-      width: 100%;
-    }
-      
-    
-    .email-button{
-      margin-left: 50px;
-      display: flex;
-      margin-top: -30px;
-      color: white;
-    }
-    
+  }
 
-    
-    .aik12{
-     color: white;
-     display: flex;
-     margin-left: 60px;
-     margin-top: -30px;
-    }
-    
-    
-    .aik14{
-      display: flex;
-      color: white;
-       margin-left: 60px;
-     margin-top: -30px;
-    }
-    
-    .aik16{
-      display: flex;
-      color: white;
-       margin-left: 360px;
-     margin-top: -30px;
-    
-    }
-    .aik17{
-      display: flex;
-      height: 200px;
-      width: 280px;
-      margin-left: 90px;
-    }
-    .aik18{
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: larger;
-      display: flex;
-      margin-left: 90px;
-      margin-top: 10px;
-    }
-    .aik19{
-      color: white;
-      margin-left: 170px;
-      margin-top: 50px;
-      display: flex;
-      font-weight: bold;
-      
-    }
-    .aik20{
-      height: 120px;
-      width: 120px;
-      display: flex;
-      margin-top: -30px;
-      margin-left: 130px;
-    }
-    .aik21{
-      color: white;
-      display: flex;
-      margin-left: 230px;
-      margin-top: -75px;
-      font-family: "Dancing Script";
-    }
-    .aik21:hover{
-     color: blueviolet;
-     font-family: "Dancing Script";
-    }
-    .aik22{
-      height: 120px;
-      width: 120px;
-      display: flex;
-      margin-left: 80px;
-      display: flex;
-      text-decoration: none;
-    }
-    
-    .aik23{
-      height: 120px;
-      width: 120px;
-      display: flex;
-      margin-left: 160px;
-      margin-top: -119px;
-     
-    }
-    .aik24{
-      height: 120px;
-      width: 120px;
-      display: flex;
-      margin-left: 245px;
-      margin-top: -120px;
-    }
-    .aik25{
-      height: 40px;
-      width: 40px;
-      display: flex;
-      margin-left: 165px;
-      margin-top: 30px;
-    }
-   .aik26{
+  u {
+    color: blue;
+  }
+
+  u:hover {
+    color: red;
+  }
+
+  .aik1 {
+    height: 500px;
+    width: 550px;
+    margin-left: -30px;
+    margin-top: -30px;
+    border-radius: 20px;
+
+
+  }
+
+  .aik2 {
+    margin-left: 130px;
+    display: flex;
+    font-family: 'Dancing Script';
+  }
+
+  .aik4 {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    margin-left: -20px;
+    margin-top: 30px;
+  }
+
+  .footer {
+    background-color: #1B182B;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    bottom: 0;
+    width: 100%;
+    height: 550px;
+    display: flex;
+  }
+
+  .aik5 {
+    margin-top: 10px;
+  }
+
+
+
+
+  .email-button {
+    margin-left: 50px;
+    display: flex;
+    margin-top: -30px;
+    color: white;
+  }
+
+
+
+  .aik12 {
+    color: white;
+    display: flex;
+    margin-left: 60px;
+    margin-top: -30px;
+  }
+
+
+  .aik14 {
+    display: flex;
+    color: white;
+    margin-left: 60px;
+    margin-top: -30px;
+  }
+
+  .aik16 {
+    display: flex;
+    color: white;
+    margin-left: 360px;
+    margin-top: -30px;
+
+  }
+
+  .aik17 {
+    display: flex;
+    height: 200px;
+    width: 280px;
+    margin-left: 90px;
+  }
+
+  .aik18 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    display: flex;
+    margin-left: 90px;
+    margin-top: 10px;
+  }
+
+  .aik19 {
+    color: white;
+    margin-left: 170px;
+    margin-top: 50px;
+    display: flex;
+    font-weight: bold;
+
+  }
+
+  .aik20 {
+    height: 120px;
+    width: 120px;
+    display: flex;
+    margin-top: -30px;
+    margin-left: 130px;
+  }
+
+  .aik21 {
+    color: white;
+    display: flex;
+    margin-left: 230px;
+    margin-top: -75px;
+    font-family: "Dancing Script";
+  }
+
+  .aik1 {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .aik21:hover {
+    color: blueviolet;
+    font-family: "Dancing Script";
+  }
+
+  .aik22 {
+    height: 120px;
+    width: 120px;
+    display: flex;
+    margin-left: 80px;
+    display: flex;
+    text-decoration: none;
+  }
+
+  .aik23 {
+    height: 120px;
+    width: 120px;
+    display: flex;
+    margin-left: 160px;
+    margin-top: -119px;
+
+  }
+
+  .aik24 {
+    height: 120px;
+    width: 120px;
+    display: flex;
+    margin-left: 245px;
+    margin-top: -120px;
+  }
+
+  .aik25 {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    margin-left: 165px;
+    margin-top: 30px;
+  }
+
+  .aik26 {
     display: flex;
     text-decoration: none;
     color: white;
     margin-left: 220px;
     margin-top: -35px;
-    
-   }
-   .aik26:hover{
+
+  }
+
+  .aik26:hover {
     color: blueviolet;
-   }
-   hr{
+  }
+
+  hr {
     color: red;
     display: flex;
-   }
-   .aik27{
+  }
+
+  .aik27 {
     color: white;
     background-color: #1B182B;
-   }
-   @media (max-width: 767px) {
-  .footer {
-    flex-direction: column-reverse;
-    height: auto;
   }
 
-  .aik17,
-  .aik18,
-  .aik19,
-  .aik20,
-  .aik21,
-  .aik22,
-  .aik23,
-  .aik24,
-  .aik25,
-  .aik26,
-  hr,
-  .aik27 {
-    margin-left: 0;
+  @media (max-width: 800px) {
+    .footer {
+      flex-direction: column-reverse;
+      height: auto;
+    }
+
+    #aik91 {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .aik17,
+    .aik18,
+    .aik19,
+    .aik20,
+    .aik21,
+    .aik22,
+    .aik23,
+    .aik24,
+    .aik25,
+    .aik26,
+    hr,
+    .aik27 {
+      margin-left: 0;
+    }
+
+    .aik19,
+    .aik21 {
+      margin-left: 0;
+      margin-top: 10px;
+    }
   }
 
-  .aik19,
-  .aik21 {
-    margin-left: 0;
-    margin-top: 10px;
-  }
-}
+  @media (max-width: 576px) {
 
-@media (max-width: 576px) {
-  .aik20,
-  .aik23,
-  .aik24,
-  .aik25 {
-    margin-left: 0;
-    margin-top: 10px;
-  }
+    .aik20,
+    .aik23,
+    .aik24,
+    .aik25 {
+      margin-left: 0;
+      margin-top: 10px;
+    }
 
-  .aik26 {
-    margin-left: 0;
-    margin-top: 10px;
-  }
+    .aik26 {
+      margin-left: 0;
+      margin-top: 10px;
+    }
 
-  .footer {
-    height: auto;
-    flex-direction: column;
-  }#asd{
-    flex-direction: column-reverse;
-  }
-}
- 
- 
+    .footer {
+      height: auto;
+      flex-direction: column;
+    }
 
-   
-        
-    </style>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-light-sm p-3 mb-5  shadow p-3 mb-5 bg-body rounded">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="square-1-1-1701068231464.png" alt="Logo" class="imgsrc">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon">nav </span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item1">
-                            <a class="nav-link1 active" href="index.html"><b> Home</b></a>
-                        </li>
-                        
-                        <li class="nav-item" >
-                            <a class="nav-link" href="Quiz.html" > <b >Quiz</b></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html"><b >About</b>  </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="read.html"><b>Read</b></a>
-                        </li>
-                    </ul>
-                </div>
+    #AIK92 {
+      width: 500px;
+      ;
+    }
+  }
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light-sm p-3 mb-5  shadow p-3 mb-5 bg-body rounded">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="square-1-1-1701068231464.png" alt="Logo" class="imgsrc">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">nav </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item1">
+            <a class="nav-link1 active" href="index.html"><b> Home</b></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="Quiz.html"> <b>Quiz</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html"><b>About</b> </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="read.html"><b>Read</b></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  </div>
+
+  <div class="container" class="row">
+
+    <div class="aik3">
+      <u>
+        <center>
+          <h1 class="aik">About</h1>
+        </center>
+      </u> <br> <br>
+    </div>
+    </u>
+    <br> <br>
+    <div class="row" id="aik91">
+      <div class="col-sm-12 col-md-6 col-lg-6 col-12">
+        <!-- <h1 class="aik2">Welcome</h1> -->
+        <div class="container">
+          <h1 class="aik2">Welcome</h1>
+        </div>
+        <!-- <h2 class="aik4">This is a website that our AIK developers <br> have created. The website is especially <br>beneficial for students of religious schools. <br>their exams. Currently, the website features <br>quizzes for two books and provides material <br>for reading. More work is in  progress, and soon, <br>additional quizzes will be available for annual <br> exams. Please remember our AIK developers and <br> the team in your prayers. Also, follow AIK developers <br> on their YouTube, Facebook, and Instagram channel <br>For contactingus, email us at dealer6785@gmail.com.</h2> -->
+        <div class="container">
+          <h2 class="aik4">
+            This is a website that our AIK developers have created. The website is especially beneficial for students of
+            religious schools <br> in their exams. Currently, the website features quizzes for two books and provides
+            material for reading. More work is in progress, and soon, additional quizzes will be available for annual
+            exams. Please remember our AIK developers and the team in your prayers. Also, follow AIK developers on their
+            YouTube, Facebook, and Instagram channels. For contacting us, email us at
+          </h2>
+
+
+        </div>
+      </div> <br>
+      <div class="col-sm-12 col-md-6 col-lg-6 col-12" id="AIK92"> <br>
+        <br>
+        <img src="368046857_122106752456007123_2577809002029427355_n.jpg" alt="" class="aik1">
+      </div>
+    </div>
+  </div>
+  <FOOter style="position: sticky;">
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-12">
+            <img src="square-1-1-1701181531556.png" alt="" class="aik17">
+            <p class="aik18"> AIK DEVOLOPER IS ONE OF THE BEST DEVOLOPING COMPANY FOR EDUCATIONAL PURPOSE WEBSITE WHOSE
+              MOTIVES ARE TO TEACH STUDENTS WITH TECHNOLOGY FOR THEIR BRIGHTIER FUTURE </p>
+          </div>
+          <div class="col-md-6 col-12">
+            <h1 class="aik19">Contact Us</h1>
+            <img src="de42028a-0125-408f-8848-3af4625db7ba-removebg-preview.png" alt="" class="aik20">
+            <p class="aik21">(+92) 33-215598-59</p>
+            <img src="de42028a-0125-408f-8848-3af4625db7ba-removebg-preview.png" alt="" class="aik20">
+            <p class="aik21">(+92) 30-102438-26</p>
+            <img src="de42028a-0125-408f-8848-3af4625db7ba-removebg-preview.png" alt="" class="aik20">
+            <p class="aik21">(+92) 32-521878-00</p>
+            <img src="square-1-1-1701469462823 GH.png" alt="" class="aik25">
+            <a href="mailto: dealer6785@gmail.com." class="aik26"> dealer6785@gmail.com.</a>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <a href="https://instagram.com/aik_devolopers.official?igshid=MTNiYzNiMzkwZA=="><img
+                src="square-1-1-1701468360276 UI.png" alt="" class="aik22"></a>
+            <a href="https://www.facebook.com/profile.php?id=61550213705568&mibextid=ZbWKwL "><img
+                src="square-1-1-1701468388485 STR.png" alt="" class="aik23"></a>
+            <a href="https://www.youtube.com/@AIKDevelopers"><img src="square-1-1-1701468420283 YU.png" alt=""
+                class="aik24"></a>
+            <div class="container">
+              <hr>
+              <p class="aik27">© Copyright 2023 by I.T. Department of AIK Developers Company</p>
             </div>
-        </nav>
-      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-             </div>
 
-             <div class="container" class="row">
-      
-                <div class="aik3">
-                  <u><center><h1 class="aik">About</h1></center></u> <br> <br>
-                </div>
-              </u>
-              <br> <br>
-              <div class="row" id="asd">
-                <div class="col-sm-12 col-md-6 col-lg-6 col-12">
-                  <!-- <h1 class="aik2">Welcome</h1> -->
-                  <div class="container">
-                    <h1 class="aik2">Welcome</h1>
-                  </div>
-                  <!-- <h2 class="aik4">This is a website that our AIK developers <br> have created. The website is especially <br>beneficial for students of religious schools. <br>their exams. Currently, the website features <br>quizzes for two books and provides material <br>for reading. More work is in  progress, and soon, <br>additional quizzes will be available for annual <br> exams. Please remember our AIK developers and <br> the team in your prayers. Also, follow AIK developers <br> on their YouTube, Facebook, and Instagram channel <br>For contactingus, email us at dealer6785@gmail.com.</h2> -->
-                  <div class="container">
-                    <h2 class="aik4">
-                      This is a website that our AIK developers have created. The website is especially beneficial for students of religious schools <br> in their exams. Currently, the website features quizzes for two books and provides material for reading. More work is in progress, and soon, additional quizzes will be available for annual exams. Please remember our AIK developers and the team in your prayers. Also, follow AIK developers on their YouTube, Facebook, and Instagram channels. For contacting us, email us at
-                    </h2>
-                     
-                     
-                  </div>
-                </div> <br>
-                <div class="col-sm-12 col-md-6 col-lg-6 col-12"> <br>
-                  <br>
-                  <img src="368046857_122106752456007123_2577809002029427355_n.jpg" alt="" class="aik1">
-                </div>
-              </div>
-            </div>
-            <FOOter style="position: sticky;">    <div class="footer">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-6 col-12">
-                    <img src="square-1-1-1701181531556.png" alt="" class="aik17">
-                    <p class="aik18">  AIK DEVOLOPER IS ONE OF THE BEST DEVOLOPING COMPANY FOR EDUCATIONAL PURPOSE WEBSITE WHOSE MOTIVES ARE TO TEACH STUDENTS WITH  TECHNOLOGY FOR THEIR BRIGHTIER FUTURE </p>
-                  </div>
-                  <div class="col-md-6 col-12">
-                    <h1 class="aik19">Contact Us</h1>
-                    <img src="de42028a-0125-408f-8848-3af4625db7ba-removebg-preview.png" alt="" class="aik20">
-                    <p class="aik21">(+92) 33-215598-59</p>
-                    <img src="de42028a-0125-408f-8848-3af4625db7ba-removebg-preview.png" alt="" class="aik20">
-                    <p class="aik21">(+92) 30-102438-26</p>
-                    <img src="de42028a-0125-408f-8848-3af4625db7ba-removebg-preview.png" alt="" class="aik20">
-                    <p class="aik21">(+92) 32-521878-00</p>
-                    <img src="square-1-1-1701469462823 GH.png" alt="" class="aik25">
-                    <a href="mailto: dealer6785@gmail.com." class="aik26"> dealer6785@gmail.com.</a>
-        
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-12">
-                    <a href="https://instagram.com/aik_devolopers.official?igshid=MTNiYzNiMzkwZA=="><img src="square-1-1-1701468360276 UI.png" alt="" class="aik22"></a>
-                    <a href="https://www.facebook.com/profile.php?id=61550213705568&mibextid=ZbWKwL "><img src="square-1-1-1701468388485 STR.png" alt="" class="aik23"></a>
-                    <a href="https://www.youtube.com/@AIKDevelopers"><img src="square-1-1-1701468420283 YU.png" alt="" class="aik24"></a>
-                    <div class="container">
-                      <hr>
-                      <p class="aik27" >© Copyright 2023 by I.T. Department of AIK Developers Company</p>
-                  </div>
-                  
-                  </div>
-                </div>
-              </div>
-             
-            </FOOter>
-        
-              
-             
-           
-  </body>      
-        
-       
+          </div>
+        </div>
+      </div>
 
-     
+  </FOOter>
+
+
+
 
 </body>
-</html>
 
-    
+
+
+
+
+</body>
+
+</html>
