@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="D:\check\check1\Aslam Aslam.ttf">
 <link rel="stylesheet" href="D:\check\check1\Jameel Noori Nastaleeq Regular.ttf">
 <link rel="stylesheet" href="D:\check\check1\AlQalam Taj Nastaleeq Regular.ttf">
+<link rel="stylesheet" href="st">
 </head>
 
              <style>
@@ -38,7 +39,9 @@
             height: 70px;
             width: 90px;
         }
-    
+        @media only screen and (max-width:800px){li{border-bottom: 2px solid rgb(245, 245, 245); width: 100%; padding-left: 200px;}}
+        @media only screen and (max-width:800px){ul { background-color: white;}}
+   
         .navbar-toggler {
             background-color:rgb(255, 255, 255); /* Adjust the color as needed */
             border: 3px solid;
@@ -180,14 +183,16 @@ ul :hover{
     
  }
  .aik:hover{
-    color: red;
+    color:goldenrod;
     font-family: 'Dancing Script'
+    ;
+    cursor: pointer;
  }
  u{
     color: blue;
  }
  u:hover{
-    color: red;
+    color:goldenrod;
  }
  .aik1{
    height: 500px;
@@ -226,7 +231,10 @@ ul :hover{
       margin-top: 10px;
     }
    
-    
+    .aik1{
+      height: auto;
+      width: 100%;
+    }
       
     
     .email-button{
@@ -394,6 +402,8 @@ ul :hover{
   .footer {
     height: auto;
     flex-direction: column;
+  }#asd{
+    flex-direction: column-reverse;
   }
 }
  
@@ -440,7 +450,7 @@ ul :hover{
                 </div>
               </u>
               <br> <br>
-              <div class="row">
+              <div class="row" id="asd">
                 <div class="col-sm-12 col-md-6 col-lg-6 col-12">
                   <!-- <h1 class="aik2">Welcome</h1> -->
                   <div class="container">
